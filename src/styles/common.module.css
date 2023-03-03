@@ -1,0 +1,31 @@
+.button {
+  cursor: pointer;
+  outline: none;
+  background-color: #266dff;
+  border: 1px solid transparent;
+  border-radius: var(--rounded);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+}
+.button:hover {
+  background-color: #1a4db7;
+}
+.label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.input {
+  outline: none;
+  background-color: var(--primary-color);
+  border: 1px solid transparent;
+  border-radius: var(--rounded);
+  padding: 0.5rem;
+  width: 15ch;
+}
+.input:focus {
+  border: 1px solid #fff;
+}

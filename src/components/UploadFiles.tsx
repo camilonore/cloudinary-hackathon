@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
-import type { responseResult } from '../types/cloudinaryWidgets.t'
+import type { responseResult } from '../types/cloudinary.t'
 import styles from '../styles/UploadFiles.module.css'
+import common from '../styles/common.module.css'
 import { useVideoContext } from '../context/VideoContext'
 
 function UploadFiles() {
@@ -9,7 +10,6 @@ function UploadFiles() {
   const uploadPreset = 'zdgqo5f2'
 
   const handleUpload = (error: undefined | Error, result: responseResult) => {
-    console.log({ error, result })
     if (!error && result && result.event === 'success') {
       setVideo(result.info)
     }
@@ -34,8 +34,7 @@ function UploadFiles() {
 
   return (
     <div className={styles.container}>
-      <p>It seems that you haven't uploaded any files</p>
-      <button className={styles.button} onClick={handleClick}>
+      <button className={common.button} onClick={handleClick}>
         Upload Files
       </button>
     </div>
