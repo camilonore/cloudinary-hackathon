@@ -1,17 +1,18 @@
 import { createContext, useContext, useState } from 'react'
+import type { CloudinaryVideo } from '../types/cloudinaryWidgets.t'
 
-interface VideoContextData {
-  videoUrl: string
-  setVideoUrl: (video: string) => void
+interface VideoContext {
+  video: CloudinaryVideo | null
+  setVideo: React.Dispatch<React.SetStateAction<CloudinaryVideo | null>>
 }
 
-const VideoContext = createContext<VideoContextData>({} as VideoContextData)
+const VideoContext = createContext<VideoContext>({} as VideoContext)
 
 const VideoProvider = ({ children }: { children: React.ReactNode }) => {
-  const [videoUrl, setVideoUrl] = useState('')
+  const [video, setVideo] = useState<CloudinaryVideo | null>(null)
 
   return (
-    <VideoContext.Provider value={{ videoUrl, setVideoUrl }}>
+    <VideoContext.Provider value={{ video, setVideo }}>
       {children}
     </VideoContext.Provider>
   )

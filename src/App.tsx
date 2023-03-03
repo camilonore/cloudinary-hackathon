@@ -7,12 +7,12 @@ import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 
 function App() {
-  const { videoUrl, setVideoUrl } = useVideoContext()
+  const { video } = useVideoContext()
   return (
     <main className={styles.main}>
       <Header />
       <section className={styles.section}>
-        {videoUrl != '' ? <VideoPlayer /> : <UploadFiles />}
+        {video ? <VideoPlayer /> : <UploadFiles />}
         <Aside />
         <Footer />
       </section>

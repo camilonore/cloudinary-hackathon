@@ -1,15 +1,17 @@
 import { useMemo } from 'react'
 import type { responseResult } from '../types/cloudinaryWidgets.t'
 import styles from '../styles/UploadFiles.module.css'
+import { useVideoContext } from '../context/VideoContext'
 
 function UploadFiles() {
+  const { setVideo } = useVideoContext()
   const cloudName = 'dt5eg0jnv'
   const uploadPreset = 'zdgqo5f2'
 
   const handleUpload = (error: undefined | Error, result: responseResult) => {
     console.log({ error, result })
     if (!error && result && result.event === 'success') {
-      console.log('Done! Here is the image info: ', result.info)
+      setVideo(result.info)
     }
   }
 
