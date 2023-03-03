@@ -50,19 +50,10 @@ type CloudinaryVideo = {
 }
 
 type responseResult = {
-  info: {
-    source: string
-  }
+  data: {}
   event: string
+  info: CloudinaryVideo
   uw_event: boolean
-  data: {
-    type: string
-    widgetId: string
-    event: string
-    info: {
-      source: string
-    }
-  }
 }
 
 declare global {
