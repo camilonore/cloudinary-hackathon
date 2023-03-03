@@ -1,0 +1,9 @@
+.container {
+  background-color: var(--secondary-color);
+  border-radius: var(--rounded);
+  display: grid;
+  place-content: center;
+}
+.button {
+  cursor: pointer;
+}

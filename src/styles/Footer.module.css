@@ -1,0 +1,6 @@
+.footer {
+  width: 100%;
+  background-color: var(--secondary-color);
+  border-radius: var(--rounded);
+  padding: 1rem;
+}

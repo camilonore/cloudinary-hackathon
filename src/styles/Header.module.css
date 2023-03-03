@@ -1,0 +1,30 @@
+.header {
+  position: relative;
+  background: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+.roundedPrev,
+.roundedAfter {
+  z-index: -1;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 38px;
+  background: var(--secondary-color);
+}
+.roundedPrev {
+  left: 0;
+}
+.roundedAfter {
+  right: 0;
+  transform: rotateZ(90deg);
+}
+.circle {
+  clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+  border-radius: 15px;
+  width: 100px;
+  height: 100px;
+  background: var(--primary-color);
+}

@@ -1,0 +1,14 @@
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.section {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 75% 1fr;
+  grid-template-columns: 75% 1fr;
+  gap: 5px;
+  padding: 1rem;
+}
