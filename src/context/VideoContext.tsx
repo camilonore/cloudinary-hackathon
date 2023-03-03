@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react'
-import type { CloudinaryVideo } from '../types/cloudinaryWidgets.t'
+import type { CloudinaryVideo } from '../types/cloudinary.t'
 
 interface VideoContext {
   video: CloudinaryVideo | null
