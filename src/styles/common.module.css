@@ -7,6 +7,7 @@
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   font-weight: bold;
+  max-width: fit-content;
   color: #fff;
 }
 .button:hover {

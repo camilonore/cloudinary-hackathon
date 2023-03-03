@@ -1,17 +1,16 @@
 import { useMemo } from 'react'
 import type { responseResult } from '../types/cloudinary.t'
-import styles from '../styles/UploadFiles.module.css'
 import common from '../styles/common.module.css'
 import { useVideoContext } from '../context/VideoContext'
 
-function UploadFiles() {
-  const { setVideo } = useVideoContext()
+function UploadFilesButton() {
+  const { setFiles } = useVideoContext()
   const cloudName = 'dt5eg0jnv'
   const uploadPreset = 'zdgqo5f2'
 
   const handleUpload = (error: undefined | Error, result: responseResult) => {
     if (!error && result && result.event === 'success') {
-      setVideo(result.info)
+      setFiles((prevVideos) => [result.info, ...prevVideos])
     }
   }
 
@@ -33,12 +32,10 @@ function UploadFiles() {
   }
 
   return (
-    <div className={styles.container}>
-      <button className={common.button} onClick={handleClick}>
-        Upload Files
-      </button>
-    </div>
+    <button className={common.button} onClick={handleClick}>
+      Upload Files
+    </button>
   )
 }
 
-export { UploadFiles }
+export { UploadFilesButton }

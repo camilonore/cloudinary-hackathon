@@ -1,0 +1,12 @@
+.videoContainer {
+  height: fit-content;
+  max-height: 100%;
+  aspect-ratio: 16/9;
+  margin: auto;
+  display: flex;
+  border-radius: var(--rounded);
+  overflow: hidden;
+}
+.video {
+  width: 100%;
+}
