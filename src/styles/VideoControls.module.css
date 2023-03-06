@@ -30,6 +30,7 @@
 }
 
 .slider > input {
+  position: relative;
   cursor: pointer;
   margin: 0 5px;
   width: 100%;
@@ -37,6 +38,33 @@
   -webkit-appearance: none;
   background-color: transparent;
   outline: none;
+}
+.slider > input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #266dff;
+  position: relative;
+  z-index: 1;
+}
+.slider > input:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 5px;
+  width: calc(100% - 5px);
+  height: 40%;
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    #424867,
+    transparent 20%,
+    transparent 100%
+  );
+  background-size: 15px 10px;
 }
 
 .button,
