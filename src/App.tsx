@@ -22,7 +22,7 @@ function App() {
       <Header />
       <main className={styles.main}>
         <section className={styles.section}>
-          {/* {currentVideo ? <VideoPlayer /> : <ButtonForNoFiles />} */}
+          {/* {currentVideo.url ? <VideoPlayer /> : <ButtonForNoFiles />} */}
           <VideoPlayer />
           <Footer />
         </section>

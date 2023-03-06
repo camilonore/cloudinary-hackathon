@@ -3,23 +3,20 @@
   grid-template-columns: 1fr 20%;
   gap: 5px;
   padding: 8px;
-  height: 100%;
-  max-height: calc(100vh - 50px);
+  height: calc(100vh - 58px);
 }
 .section {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  max-height: calc(100vh - 65px);
   gap: 5px;
 }
 
 .filesContainer {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   gap: 20px;
   background-color: var(--secondary-color);
   border-radius: var(--rounded);

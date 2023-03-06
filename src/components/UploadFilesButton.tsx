@@ -2,15 +2,16 @@ import { useMemo } from 'react'
 import type { responseResult } from '../types/cloudinary.t'
 import common from '../styles/common.module.css'
 import { useVideoContext } from '../context/VideoContext'
+import { UploadCloud } from './Icons/UploadCloud'
 
 function UploadFilesButton() {
-  const { setFiles } = useVideoContext()
+  const { setCurrentVideo } = useVideoContext()
   const cloudName = 'dt5eg0jnv'
   const uploadPreset = 'zdgqo5f2'
 
   const handleUpload = (error: undefined | Error, result: responseResult) => {
     if (!error && result && result.event === 'success') {
-      setFiles((prevVideos) => [result.info, ...prevVideos])
+      setCurrentVideo(result.info)
     }
   }
 
@@ -34,6 +35,7 @@ function UploadFilesButton() {
   return (
     <button className={common.button} onClick={handleClick}>
       Upload Files
+      <UploadCloud />
     </button>
   )
 }

@@ -9,6 +9,13 @@
   font-weight: bold;
   max-width: fit-content;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.button > svg {
+  transform: scale(0.8);
 }
 .button:hover {
   background-color: #1a4db7;
