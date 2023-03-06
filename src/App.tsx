@@ -6,17 +6,29 @@ import { UploadFilesButton } from './components/UploadFilesButton'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 
-function App() {
-  const { files } = useVideoContext()
+function ButtonForNoFiles() {
   return (
-    <main className={styles.main}>
+    <div className={styles.filesContainer}>
+      <h1>Start by uploading a file! 📼</h1>
+      <UploadFilesButton />
+    </div>
+  )
+}
+
+function App() {
+  const { currentVideo } = useVideoContext()
+  return (
+    <>
       <Header />
-      <section className={styles.section}>
-        {files.length != 0 ? <VideoPlayer /> : <UploadFilesButton />}
+      <main className={styles.main}>
+        <section className={styles.section}>
+          {/* {currentVideo ? <VideoPlayer /> : <ButtonForNoFiles />} */}
+          <VideoPlayer />
+          <Footer />
+        </section>
         <Aside />
-        <Footer />
-      </section>
-    </main>
+      </main>
+    </>
   )
 }
 

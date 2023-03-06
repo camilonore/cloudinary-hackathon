@@ -1,14 +1,26 @@
 .main {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.section {
-  width: 100%;
-  height: 100%;
   display: grid;
-  grid-template-rows: 75% 1fr;
-  grid-template-columns: 75% 1fr;
+  grid-template-columns: 1fr 20%;
   gap: 5px;
   padding: 8px;
+  height: 100%;
+  max-height: calc(100vh - 50px);
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: calc(100vh - 65px);
+  gap: 5px;
+}
+
+.filesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+  background-color: var(--secondary-color);
+  border-radius: var(--rounded);
 }

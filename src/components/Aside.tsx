@@ -27,7 +27,7 @@ function Aside() {
     <aside className={styles.aside}>
       <form onSubmit={handleSubmit} className={styles.form}>
         {formFields.map((field) => (
-          <section className={styles.section}>
+          <section className={styles.section} key={field.id}>
             <label className={common.label} htmlFor={field.id}>
               {field.label}
             </label>
