@@ -3,7 +3,7 @@ import { useVideoContext } from '../context/VideoContext'
 import styles from '../styles/AddSideFile.module.css'
 import { responseResult } from '../types/cloudinary.t'
 import { AddIcon } from './Icons/Add'
-import { editOptions, URL_PATH } from '../cloudinary/index'
+import { concatenateOptions, URL_PATH } from '../cloudinary/index'
 
 function AddSideFile() {
   const { currentVideo, setAditionalFiles, aditionalFiles, setCurrentVideo } =
@@ -18,7 +18,7 @@ function AddSideFile() {
       setAditionalFiles((prevFiles) => [...prevFiles, info])
       const videoSource = info.public_id.replace('/', ':')
       if (info.resource_type === 'video') {
-        const optionUrl = editOptions.concatenateVideo(
+        const optionUrl = concatenateOptions.concatenateVideo(
           videoSource,
           currentVideo.height,
           currentVideo.width,
@@ -27,7 +27,7 @@ function AddSideFile() {
         const newUrl = `${URL_PATH}/${optionUrl}/${currentVideo.public_id}`
         setCurrentVideo({ ...currentVideo, url: newUrl })
       } else {
-        const optionUrl = editOptions.concatenateImages(
+        const optionUrl = concatenateOptions.concatenateImages(
           videoSource,
           5,
           currentVideo.height,

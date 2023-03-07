@@ -1,6 +1,7 @@
 import styles from '../styles/Aside.module.css'
 import common from '../styles/common.module.css'
 import { URL_PATH, editOptions } from '../cloudinary/index'
+import type { EdtitOptionsType } from '../cloudinary/index'
 import { useVideoContext } from '../context/VideoContext'
 
 function Aside() {
@@ -11,10 +12,10 @@ function Aside() {
     const form = e.currentTarget
     const formData = new FormData(form)
     const formInputs = Array.from(formData)
-    const optionsUrl = formInputs.map((input) => {
-      const [name, value] = input
+    const optionsUrl: (string | undefined)[] = formInputs.map((input) => {
+      const [name, value] = input as [keyof EdtitOptionsType, string]
       if (value !== '') {
-        return editOptions[name](value)
+        return editOptions[name](Number(value))
       }
     })
     const optionsUrlFiltered = optionsUrl.filter(
