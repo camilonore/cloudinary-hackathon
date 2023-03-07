@@ -38,7 +38,7 @@ const editOptions = {
   ) => {
     return `h_${height},w_${width}/h_${height},w_${width},l_${source},fl_splice,du_${duration}/so_${
       beggining ? 0 : 1
-    }, fl_layer_apply`
+    },fl_layer_apply`
   }
 }
 

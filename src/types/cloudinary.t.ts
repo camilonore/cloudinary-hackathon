@@ -47,6 +47,7 @@ type CloudinaryVideo = {
   done: boolean
   path: string
   thumbnail_url: string
+  isRight?: boolean
 }
 
 type responseResult = {

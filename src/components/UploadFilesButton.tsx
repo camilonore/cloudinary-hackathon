@@ -21,7 +21,7 @@ function UploadFilesButton() {
         cloudName: cloudName,
         uploadPreset: uploadPreset,
         folder: 'video-editor',
-        clientAllowedFormats: ['image', 'video']
+        clientAllowedFormats: ['video']
       },
       handleUpload
     )
