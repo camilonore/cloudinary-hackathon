@@ -63,7 +63,7 @@ function AddSideFile() {
         <AddIcon />
       </button>
       {aditionalFiles.map((file) => {
-        if (file.isRight) {
+        if (!file.isRight) {
           return <img src={file.thumbnail_url} alt={file.original_filename} />
         }
       })}
@@ -72,7 +72,7 @@ function AddSideFile() {
         alt={currentVideo.original_filename}
       />
       {aditionalFiles.map((file) => {
-        if (!file.isRight) {
+        if (file.isRight) {
           return <img src={file.thumbnail_url} alt={file.original_filename} />
         }
       })}

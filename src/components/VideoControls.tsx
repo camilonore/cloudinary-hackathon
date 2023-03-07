@@ -18,6 +18,14 @@ function VideoControls() {
     }
     const minutes = Math.floor(timeInSeconds / 60)
     const seconds = Math.floor(timeInSeconds - minutes * 60)
+    if (
+      minutes === Infinity ||
+      isNaN(minutes) ||
+      seconds === Infinity ||
+      isNaN(seconds)
+    ) {
+      return '0:00'
+    }
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
   }
   const updateTimeElapsed = () => {
