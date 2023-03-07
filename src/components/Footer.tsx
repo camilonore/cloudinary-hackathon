@@ -1,11 +1,16 @@
 import styles from '../styles/Footer.module.css'
+import { AddSideFile } from './AddSideFile'
+
+function DummyFooter() {
+  return <footer className={styles.footer} />
+}
 
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <p>Change video order here!</p>
+      <AddSideFile />
     </footer>
   )
 }
 
-export { Footer }
+export { Footer, DummyFooter }

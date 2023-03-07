@@ -1,4 +1,4 @@
-const URL_PATH = 'https://res.cloudinary.com/dt5eg0jnv/video/upload/v1677857025'
+const URL_PATH = 'https://res.cloudinary.com/dt5eg0jnv/video/upload'
 
 const editOptions = {
   height: (height: number) => {

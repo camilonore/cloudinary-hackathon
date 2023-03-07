@@ -14,14 +14,10 @@ function VideoPlayer() {
   const videoRef = useRef<HTMLVideoElement>(null)
   return (
     <section className={styles.videoContainer}>
-      {/* <video className={styles.video} src={currentVideo.url} /> */}
-      <video
-        className={styles.video}
-        ref={videoRef}
-        src={
+      {/* src={
           'https://res.cloudinary.com/dt5eg0jnv/video/upload/v1676999470/samples/cld-sample-video.mp4'
-        }
-      />
+        } */}
+      <video className={styles.video} ref={videoRef} src={currentVideo.url} />
       <VideoControls />
     </section>
   )

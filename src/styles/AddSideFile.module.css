@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  height: 50px;
+}
+.buttonL,
+.buttonR {
+  cursor: pointer;
+  outline: none;
+  background-color: #266dff;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonL {
+  border-radius: var(--rounded) 0 0 var(--rounded);
+}
+.buttonR {
+  border-radius: 0 var(--rounded) var(--rounded) 0;
+}
+.buttonL > svg,
+.buttonR > svg {
+  transform: scale(0.8);
+}
+.buttonL:hover,
+.buttonR:hover {
+  background-color: #1a4db7;
+}
+.buttonL:disabled,
+.buttonR:disabled {
+  background-color: #515e79;
+  cursor: not-allowed;
+}
+.buttonL:focus,
+.buttonR:focus {
+  border: 1px solid #fff;
+}

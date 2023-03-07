@@ -1,4 +1,5 @@
 .button {
+  text-decoration: none;
   cursor: pointer;
   outline: none;
   background-color: #266dff;
@@ -19,6 +20,13 @@
 }
 .button:hover {
   background-color: #1a4db7;
+}
+.button:disabled {
+  background-color: #515e79;
+  cursor: not-allowed;
+}
+.button:focus {
+  border: 1px solid #fff;
 }
 .label {
   font-size: 1rem;
